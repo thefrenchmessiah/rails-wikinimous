@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+/* ALL PAGES */
+.container {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  background-color: rgb(230, 247, 255);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card {
+padding: 10px;
+margin: 10px;
+background-color: beige;
+box-shadow: 0 0 5px rgb(128, 186, 209);
+border-radius: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(128, 186, 209);
+  margin-bottom: 5px;
+}
+
+.card-content {
+  font-style: italic;
+  color: rgba(128, 128, 128, 0.693);
+}
+
+button {
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 6px;
+  height: 25px;
+  width: 120px;
+}
+.button-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/* FORMS */
+
+.form {
+  border: 1px solid black;
+  width: 200px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.form-title {
+  margin: 10px;
+}
+
+.form-content {
+  margin: 10px;
+}

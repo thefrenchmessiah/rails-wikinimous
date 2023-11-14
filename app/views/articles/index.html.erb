@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Welcome to WikiPhilosophy</h1>
+  <button id="button-post"><%= link_to "Post an article", new_article_path, class: "button-link" %></button>
+  <div>
+    <% @articles.each do |article| %>
+      <div class="card">
+        <div class="card-title"><%= article.title %></div>
+        <div class="card-content"><%= article.content %></div>
+        <button><%= link_to "Go to article", article_path(article), class: "button-link" %></button>
+        <button>
+          <%= link_to "Delete",
+            article_path(article),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button-link" %></button>
+      </div>
+    <% end %>
+  </div>
+</div>

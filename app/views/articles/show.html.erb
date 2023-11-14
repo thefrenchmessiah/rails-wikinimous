@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> <%= @article.title %> </h1>
+  <p class="card"> <%= @article.content %></p>
+  <button><%= link_to "Edit", edit_article_path, class: "button-link" %></button>
+  <button>
+  <%= link_to "Delete",
+    article_path(@article),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button-link" %></button>
+  <div>
+    <% if @article.id > 1 %>
+      <button><%= link_to "Previous", article_path(@article.id - 1), class: "button-link" %></button>
+    <% end %>
+    <% if @article.id < 10 %>
+      <button><%= link_to "Next", article_path(@article.id + 1), class: "button-link" %></button>
+    <% end %>
+  </div>
+  <button><%= link_to "Home", articles_path, class: "button-link" %></button>
+</div>
